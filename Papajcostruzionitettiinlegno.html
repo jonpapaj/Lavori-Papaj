@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>PAPAJ COSTRUZIONI | TETTI IN LEGNO TREVISO</title>
-  <meta name="description" content="Papaj Costruzioni: 30 anni di esperienza nella costruzione e riparazione tetti in legno a Treviso. Lavori professionali e duraturi.">
-  <meta name="keywords" content="tetti in legno Treviso, costruzione tetti legno Treviso">
+  <meta name="description" content="Papaj Costruzioni: 30 anni di esperienza nella costruzione e riparazione tetti in legno a Treviso.">
 
   <style>
     * { box-sizing: border-box; scroll-behavior: smooth; }
@@ -46,9 +45,10 @@
       animation: slideShow 15s infinite;
     }
 
-    .slide:nth-child(1) { background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e'); }
-    .slide:nth-child(2) { background-image: url('https://images.unsplash.com/photo-1599423300746-b62533397364'); animation-delay: 5s; }
-    .slide:nth-child(3) { background-image: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115'); animation-delay: 10s; }
+    /* immagini tetti in costruzione */
+    .slide:nth-child(1) { background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789'); }
+    .slide:nth-child(2) { background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd'); animation-delay: 5s; }
+    .slide:nth-child(3) { background-image: url('https://images.unsplash.com/photo-1597011061134-6c3c06e0f0e5'); animation-delay: 10s; }
 
     @keyframes slideShow {
       0% { opacity: 0; }
@@ -60,15 +60,33 @@
 
     header .content { position: relative; z-index: 2; }
 
-    h1 {
-      font-size: 4em;
-      margin: 0;
-      letter-spacing: 3px;
+    h1 { font-size: 4em; margin: 0; }
+
+    header p { font-size: 1.5em; text-transform: uppercase; }
+
+    .buttons {
+      margin-top: 20px;
     }
 
-    header p {
-      font-size: 1.5em;
-      text-transform: uppercase;
+    .btn-wa {
+      background: #25D366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+    }
+
+    .btn-wa img { width: 30px; }
+
+    .btn-prev {
+      padding: 14px 24px;
+      background: linear-gradient(145deg, #8b5a2b, #5a3b1c);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
     }
 
     nav {
@@ -92,38 +110,44 @@
       padding: 70px 20px;
     }
 
-    h2 { color: #caa472; font-size: 2em; }
+    h2 { color: #caa472; font-size: 2.2em; }
 
     .card {
       background: #0a0a0a;
       padding: 30px;
       border-radius: 14px;
       margin-bottom: 30px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
     }
 
-    .btn {
-      padding: 14px 24px;
-      background: linear-gradient(145deg, #8b5a2b, #5a3b1c);
-      color: white;
-      border-radius: 10px;
-      text-decoration: none;
-      display: inline-block;
+    .services p strong {
+      font-size: 1.3em;
+      display: block;
       margin-top: 10px;
+    }
+
+    .small-box {
+      max-width: 400px;
+      margin: auto;
+      text-align: center;
     }
 
     form input, form textarea {
       width: 100%;
-      padding: 14px;
-      margin: 10px 0;
+      padding: 12px;
+      margin: 8px 0;
       border-radius: 8px;
       border: none;
     }
 
+    .big-contact {
+      font-size: 1.4em;
+      text-align: center;
+    }
+
     iframe {
       width: 100%;
-      border: 0;
       border-radius: 10px;
+      margin-top: 15px;
     }
 
   </style>
@@ -140,7 +164,13 @@
   <div class="content">
     <h1>PAPAJ COSTRUZIONI</h1>
     <p>TETTI IN LEGNO TREVISO</p>
-    <a class="btn" href="https://wa.me/393283256441">WhatsApp</a>
+
+    <div class="buttons">
+      <a class="btn-wa" href="https://wa.me/393283256441" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+      </a>
+      <a class="btn-prev" href="#preventivo">PREVENTIVO</a>
+    </div>
   </div>
 </header>
 
@@ -155,47 +185,43 @@
 <div class="card">
 <h2>Chi siamo</h2>
 <p>
-Papaj Costruzioni è un'impresa con oltre 30 anni di esperienza nel settore dei tetti in legno a Treviso.
-
-Realizziamo strutture solide, sicure e progettate per durare nel tempo, utilizzando materiali selezionati di alta qualità.
-
-Ogni intervento viene eseguito con precisione, cura dei dettagli e massima attenzione alla pulizia del lavoro.
-
-Garantiamo affidabilità, professionalità e risultati duraturi.
+Papaj Costruzioni opera da oltre 30 anni nel settore dei tetti in legno a Treviso.
+Realizziamo strutture solide e durature utilizzando materiali di alta qualità.
+Garantiamo lavori puliti, precisi e professionali.
 </p>
 </div>
 
-<div id="servizi" class="card">
+<div id="servizi" class="card services">
 <h2>Servizi</h2>
-<p><strong>Costruzione tetti in legno:</strong> progettazione e realizzazione completa su misura.</p>
-<p><strong>Riparazioni:</strong> interventi rapidi per infiltrazioni e danni strutturali.</p>
-<p><strong>Manutenzione:</strong> controlli periodici per garantire sicurezza e durata nel tempo.</p>
+<p><strong>Costruzione tetti in legno</strong> progettazione e realizzazione completa</p>
+<p><strong>Riparazioni</strong> interventi veloci e mirati</p>
+<p><strong>Manutenzione</strong> controlli per durata e sicurezza</p>
 </div>
 
-<div id="preventivo" class="card">
-<h2>Richiedi Preventivo</h2>
+<div id="preventivo" class="card small-box">
+<h2>Preventivo</h2>
 <form onsubmit="sendToWhatsApp(event)">
 <input type="text" id="nome" placeholder="Nome" required>
 <input type="text" id="telefono" placeholder="Telefono" required>
 <textarea id="messaggio" placeholder="Descrivi il lavoro"></textarea>
-<button class="btn">Invia</button>
+<button class="btn-prev">Invia</button>
 </form>
 </div>
 
-<div class="card">
-<h2>Lascia un commento</h2>
+<div class="card small-box">
+<h2>Commento</h2>
 <form onsubmit="addComment(event)">
 <input type="text" id="commentName" placeholder="Nome" required>
-<textarea id="commentText" placeholder="Scrivi la tua esperienza" required></textarea>
-<button class="btn">Pubblica</button>
+<textarea id="commentText" placeholder="Scrivi esperienza"></textarea>
+<button class="btn-prev">Pubblica</button>
 </form>
 <div id="comments"></div>
 </div>
 
-<div id="contatti" class="card">
+<div id="contatti" class="card big-contact">
 <h2>Contatti</h2>
-<p>Telefono: 328 325 6441</p>
-<p>Email: papajjon@gmail.com</p>
+<p>📞 328 325 6441</p>
+<p>📧 papajjon@gmail.com</p>
 <iframe src="https://maps.google.com/maps?q=San%20Zenone%20degli%20Ezzelini&t=&z=13&ie=UTF8&iwloc=&output=embed" height="250"></iframe>
 </div>
 
