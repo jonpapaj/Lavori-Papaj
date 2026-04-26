@@ -3,30 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Papaj Costruzioni - Esperti in costruzione e riparazione tetti in legno a San Zenone degli Ezzelini (Treviso). Preventivi veloci e lavori di qualità.">
-  <meta name="keywords" content="tetti in legno Treviso, costruzione tetti, riparazione tetti, edilizia San Zenone degli Ezzelini">
-  <title>Papaj Costruzioni | Tetti in Legno Treviso</title>
+
+  <title>PAPAJ COSTRUZIONI | TETTI IN LEGNO TREVISO</title>
+  <meta name="description" content="Papaj Costruzioni: 30 anni di esperienza nella costruzione e riparazione di tetti in legno a Treviso. Lavori di qualità, duraturi e professionali.">
+  <meta name="keywords" content="tetti in legno Treviso, costruzione tetti legno Treviso, rifacimento tetti Treviso">
 
   <style>
     * { box-sizing: border-box; scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
+      color: #e5e5e5;
+      background: #000;
     }
 
     header {
-      background: linear-gradient(135deg, #0ea5e9, #1e293b);
-      padding: 80px 20px;
+      position: relative;
+      padding: 120px 20px;
       text-align: center;
-      animation: fadeIn 1.5s ease-in-out;
+      color: white;
+      overflow: hidden;
     }
 
-    header h1 { font-size: 2.8em; margin: 0; }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
+      opacity: 0.35;
+      z-index: 0;
+    }
+
+    header * { position: relative; z-index: 1; }
+
+    header h1 {
+      font-size: 3.5em;
+      margin: 0;
+      letter-spacing: 2px;
+      animation: fadeUp 1s ease;
+    }
+
+    header p {
+      font-size: 1.4em;
+      margin: 15px 0;
+      text-transform: uppercase;
+      animation: fadeUp 1.4s ease;
+    }
 
     nav {
-      background: #020617;
+      background: #050505;
       padding: 15px;
       text-align: center;
       position: sticky;
@@ -35,13 +61,11 @@
     }
 
     nav a {
-      color: #38bdf8;
+      color: #caa472;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
-
-    nav a:hover { color: white; }
 
     .container {
       max-width: 1100px;
@@ -51,17 +75,17 @@
 
     .section { margin-bottom: 70px; }
 
-    h2 { color: #38bdf8; }
+    h2 { color: #caa472; }
 
     .card {
-      background: #020617;
+      background: #0a0a0a;
       padding: 25px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
-      transform: translateY(30px);
+      border-radius: 14px;
+      margin-bottom: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      transform: translateY(40px);
       opacity: 0;
-      transition: all 0.6s ease;
+      transition: all 0.8s ease;
     }
 
     .card.show {
@@ -71,30 +95,38 @@
 
     .btn {
       display: inline-block;
-      padding: 12px 20px;
-      background: #22c55e;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
+      padding: 14px 24px;
+      border-radius: 10px;
       font-weight: bold;
-      margin-top: 10px;
+      margin: 8px;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(145deg, #8b5a2b, #5a3b1c);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      transition: 0.3s;
     }
 
-    .btn:hover { background: #16a34a; }
-
-    .btn-secondary {
-      background: #0ea5e9;
+    .btn:hover {
+      transform: translateY(-2px) scale(1.05);
     }
 
     footer {
-      background: #020617;
+      background: #050505;
       text-align: center;
       padding: 30px;
-      color: #94a3b8;
+      color: #777;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
@@ -102,63 +134,82 @@
 <body>
 
 <header>
-  <h1>Papaj Costruzioni</h1>
-  <p>Tetti in legno a Treviso - Qualità e affidabilità</p>
-  <a class="btn" href="https://wa.me/393283256441" target="_blank">WhatsApp</a>
-  <a class="btn btn-secondary" href="#preventivo">Richiedi Preventivo</a>
+  <h1>PAPAJ COSTRUZIONI</h1>
+  <p>TETTI IN LEGNO TREVISO</p>
+
+  <a class="btn" href="https://wa.me/393283256441?text=Salve%2C%20vorrei%20un%20preventivo" target="_blank">WhatsApp</a>
+  <a class="btn" href="#preventivo">Richiedi Preventivo</a>
 </header>
 
 <nav>
-  <a href="#home">Home</a>
   <a href="#servizi">Servizi</a>
   <a href="#preventivo">Preventivo</a>
+  <a href="#recensioni">Recensioni</a>
   <a href="#contatti">Contatti</a>
 </nav>
 
 <div class="container">
 
-  <section id="home" class="section">
-    <div class="card">
-      <h2>Impresa Edile a Treviso</h2>
-      <p>Specializzati nella costruzione e riparazione di tetti in legno a San Zenone degli Ezzelini e provincia di Treviso. Lavori precisi, sicuri e duraturi.</p>
-    </div>
-  </section>
+<section class="section">
+  <div class="card">
+    <h2>Chi siamo</h2>
+    <p>Con oltre 30 anni di esperienza nel settore edilizio, Papaj Costruzioni è specializzata nella realizzazione e riparazione di tetti in legno a Treviso e provincia. Utilizziamo esclusivamente materiali di alta qualità per garantire strutture solide, sicure e durature nel tempo.</p>
+    <p>Ogni lavoro viene eseguito con precisione, cura dei dettagli e pulizia, offrendo al cliente un risultato professionale e affidabile. Il nostro obiettivo è creare tetti resistenti, esteticamente curati e costruiti per durare negli anni.</p>
+    <p>Affidabilità, esperienza e qualità sono i valori che guidano ogni nostro intervento.</p>
+  </div>
+</section>
 
-  <section id="servizi" class="section">
-    <h2>Servizi</h2>
+<section id="servizi" class="section">
+  <h2>Servizi</h2>
 
-    <div class="card">
-      <h3>Costruzione Tetti in Legno</h3>
-      <p>Progettiamo e realizziamo tetti su misura.</p>
-    </div>
+  <div class="card">
+    <h3>Costruzione tetti in legno</h3>
+    <p>Progettiamo e realizziamo tetti su misura con materiali certificati.</p>
+  </div>
 
-    <div class="card">
-      <h3>Riparazioni</h3>
-      <p>Interventi rapidi per infiltrazioni e danni.</p>
-    </div>
+  <div class="card">
+    <h3>Riparazioni tetti</h3>
+    <p>Interventi rapidi per infiltrazioni, danni e manutenzioni.</p>
+  </div>
 
-    <div class="card">
-      <h3>Manutenzione</h3>
-      <p>Controlli e manutenzione professionale.</p>
-    </div>
-  </section>
+</section>
 
-  <section id="preventivo" class="section">
-    <div class="card">
-      <h2>Richiedi Preventivo</h2>
-      <p>Contattaci direttamente su WhatsApp per ricevere un preventivo veloce.</p>
-      <a class="btn" href="https://wa.me/393283256441" target="_blank">Richiedi Preventivo Ora</a>
-    </div>
-  </section>
+<section id="preventivo" class="section">
+  <div class="card">
+    <h2>Richiedi Preventivo</h2>
 
-  <section id="contatti" class="section">
-    <div class="card">
-      <h2>Contatti</h2>
-      <p><strong>Telefono:</strong> 328 325 6441</p>
-      <p><strong>Email:</strong> papajjon@gmail.com</p>
-      <p><strong>Zona:</strong> San Zenone degli Ezzelini (Treviso)</p>
-    </div>
-  </section>
+    <form onsubmit="sendToWhatsApp(event)">
+      <input type="text" id="nome" placeholder="Nome" required>
+      <input type="text" id="telefono" placeholder="Telefono" required>
+      <textarea id="messaggio" placeholder="Descrivi il lavoro"></textarea>
+      <button class="btn" type="submit">Invia su WhatsApp</button>
+    </form>
+
+  </div>
+</section>
+
+<section id="recensioni" class="section">
+  <h2>Recensioni Clienti</h2>
+
+  <div class="card">
+    <p>"Lavoro perfetto, tetto rifatto completamente. Professionali e veloci."</p>
+    <strong>- Marco R.</strong>
+  </div>
+
+  <div class="card">
+    <p>"Serietà e qualità. Consigliati per chi cerca tetti in legno a Treviso."</p>
+    <strong>- Luca B.</strong>
+  </div>
+
+</section>
+
+<section id="contatti" class="section">
+  <div class="card">
+    <h2>Contatti</h2>
+    <p>Telefono: 328 325 6441</p>
+    <p>Email: papajjon@gmail.com</p>
+  </div>
+</section>
 
 </div>
 
@@ -168,18 +219,23 @@
 
 <script>
   const cards = document.querySelectorAll('.card');
-
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
+      if (entry.isIntersecting) entry.target.classList.add('show');
     });
   });
+  cards.forEach(card => observer.observe(card));
 
-  cards.forEach(card => {
-    observer.observe(card);
-  });
+  function sendToWhatsApp(e) {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value;
+    const telefono = document.getElementById('telefono').value;
+    const messaggio = document.getElementById('messaggio').value;
+
+    const text = `Nome: ${nome}%0ATelefono: ${telefono}%0ADettagli: ${messaggio}`;
+    window.open(`https://wa.me/393283256441?text=${text}`, '_blank');
+  }
 </script>
 
 </body>
