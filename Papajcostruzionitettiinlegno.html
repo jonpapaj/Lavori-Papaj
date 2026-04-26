@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Papaj Costruzioni - Esperti in costruzione e riparazione tetti in legno a San Zenone degli Ezzelini (Treviso). Preventivi veloci e lavori di qualità.">
+  <meta name="keywords" content="tetti in legno Treviso, costruzione tetti, riparazione tetti, edilizia San Zenone degli Ezzelini">
+  <title>Papaj Costruzioni | Tetti in Legno Treviso</title>
+
+  <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0ea5e9, #1e293b);
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    header h1 { font-size: 2.8em; margin: 0; }
+
+    nav {
+      background: #020617;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #38bdf8;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover { color: white; }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .section { margin-bottom: 70px; }
+
+    h2 { color: #38bdf8; }
+
+    .card {
+      background: #020617;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      transform: translateY(30px);
+      opacity: 0;
+      transition: all 0.6s ease;
+    }
+
+    .card.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #22c55e;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .btn:hover { background: #16a34a; }
+
+    .btn-secondary {
+      background: #0ea5e9;
+    }
+
+    footer {
+      background: #020617;
+      text-align: center;
+      padding: 30px;
+      color: #94a3b8;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Papaj Costruzioni</h1>
+  <p>Tetti in legno a Treviso - Qualità e affidabilità</p>
+  <a class="btn" href="https://wa.me/393283256441" target="_blank">WhatsApp</a>
+  <a class="btn btn-secondary" href="#preventivo">Richiedi Preventivo</a>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#servizi">Servizi</a>
+  <a href="#preventivo">Preventivo</a>
+  <a href="#contatti">Contatti</a>
+</nav>
+
+<div class="container">
+
+  <section id="home" class="section">
+    <div class="card">
+      <h2>Impresa Edile a Treviso</h2>
+      <p>Specializzati nella costruzione e riparazione di tetti in legno a San Zenone degli Ezzelini e provincia di Treviso. Lavori precisi, sicuri e duraturi.</p>
+    </div>
+  </section>
+
+  <section id="servizi" class="section">
+    <h2>Servizi</h2>
+
+    <div class="card">
+      <h3>Costruzione Tetti in Legno</h3>
+      <p>Progettiamo e realizziamo tetti su misura.</p>
+    </div>
+
+    <div class="card">
+      <h3>Riparazioni</h3>
+      <p>Interventi rapidi per infiltrazioni e danni.</p>
+    </div>
+
+    <div class="card">
+      <h3>Manutenzione</h3>
+      <p>Controlli e manutenzione professionale.</p>
+    </div>
+  </section>
+
+  <section id="preventivo" class="section">
+    <div class="card">
+      <h2>Richiedi Preventivo</h2>
+      <p>Contattaci direttamente su WhatsApp per ricevere un preventivo veloce.</p>
+      <a class="btn" href="https://wa.me/393283256441" target="_blank">Richiedi Preventivo Ora</a>
+    </div>
+  </section>
+
+  <section id="contatti" class="section">
+    <div class="card">
+      <h2>Contatti</h2>
+      <p><strong>Telefono:</strong> 328 325 6441</p>
+      <p><strong>Email:</strong> papajjon@gmail.com</p>
+      <p><strong>Zona:</strong> San Zenone degli Ezzelini (Treviso)</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 Papaj Costruzioni</p>
+</footer>
+
+<script>
+  const cards = document.querySelectorAll('.card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  cards.forEach(card => {
+    observer.observe(card);
+  });
+</script>
+
+</body>
+</html>
