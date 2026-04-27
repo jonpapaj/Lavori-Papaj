@@ -48,14 +48,22 @@ header p{font-size:1.5em;text-transform:uppercase}
  color:#ddd;
 }
 
-.buttons{margin-top:25px}
+.buttons{
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ gap:12px;
+ margin-top:25px;
+}
 
 .btn-wa{
  background:#25D366;
  border-radius:50%;
- width:65px;height:65px;
- display:inline-flex;align-items:center;justify-content:center;
- margin-right:10px;
+ width:60px;
+ height:60px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
  box-shadow:0 0 15px rgba(37,211,102,0.6);
  transition:0.3s;
 }
@@ -66,9 +74,14 @@ header p{font-size:1.5em;text-transform:uppercase}
 .btn-prev{
  padding:14px 26px;
  background:linear-gradient(145deg,#8b5a2b,#5a3b1c);
- color:white;border-radius:8px;text-decoration:none;
+ color:white;
+ border-radius:8px;
+ text-decoration:none;
  box-shadow:0 5px 15px rgba(0,0,0,0.5);
  transition:0.3s;
+ display:flex;
+ align-items:center;
+ justify-content:center;
 }
 
 .btn-prev:hover{transform:translateY(-3px) scale(1.05)}
@@ -91,7 +104,12 @@ h2{color:#caa472;font-size:2.2em}
 
 .services p strong{font-size:1.3em;display:block;margin-top:10px}
 
-.small-box{max-width:400px;margin:auto;text-align:center}
+.small-box{
+ max-width:420px;
+ margin:40px auto;
+ text-align:center;
+ padding:25px;
+}
 
 .big-contact{font-size:1.6em;text-align:center}
 
@@ -116,12 +134,52 @@ h2{color:#caa472;font-size:2.2em}
 }
 
 form input,form textarea{
- width:100%;padding:12px;margin:8px 0;border-radius:8px;border:none
+ width:100%;
+ padding:14px;
+ margin:10px 0;
+ border-radius:8px;
+ border:none;
 }
 
 #comments p{margin:6px 0}
 
 @keyframes zoomBg{from{transform:scale(1.1)}to{transform:scale(1.2)}}
+
+
+/* BARRA FISSA MOBILE */
+.fixed-bar{
+ position:fixed;
+ bottom:0;
+ left:0;
+ width:100%;
+ background:#000;
+ display:flex;
+ justify-content:space-around;
+ align-items:center;
+ padding:10px 0;
+ z-index:9999;
+ border-top:1px solid #222;
+}
+
+.fixed-bar a{
+ flex:1;
+ text-align:center;
+ padding:10px;
+ color:white;
+ text-decoration:none;
+ font-weight:bold;
+}
+
+.fixed-wa{
+ background:#25D366;
+}
+
+.fixed-call{
+ background:#8b5a2b;
+}
+
+body{padding-bottom:70px;}
+
 </style>
 </head>
 <body>
@@ -136,6 +194,7 @@ form input,form textarea{
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
     </a>
     <a class="btn-prev" href="#preventivo">PREVENTIVO</a>
+    <a class="btn-prev" href="tel:3283256441">CHIAMA ORA</a>
   </div>
 </header>
 
@@ -239,6 +298,14 @@ function addComment(e){
  document.getElementById('comments').appendChild(div);
 }
 </script>
+
+
+
+<!-- BARRA FISSA -->
+<div class="fixed-bar">
+  <a class="fixed-wa" href="https://wa.me/393283256441" target="_blank">WhatsApp</a>
+  <a class="fixed-call" href="tel:3283256441">Chiama Ora</a>
+</div>
 
 </body>
 </html>
