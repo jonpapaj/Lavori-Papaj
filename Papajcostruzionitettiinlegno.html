@@ -39,8 +39,18 @@ header::after{
 
 header *{position:relative;z-index:2}
 
-h1{font-size:4em;margin:0;letter-spacing:3px}
-header p{font-size:1.5em;text-transform:uppercase}
+h1{
+ font-size:5.8em;
+ margin:0;
+ letter-spacing:5px;
+ transform:translateY(-15px);
+}
+header p{
+ font-size:2em;
+ text-transform:uppercase;
+ margin-top:3px;
+ letter-spacing:3px;
+}
 
 .subtext{
  margin-top:10px;
@@ -146,47 +156,14 @@ form input,form textarea{
 @keyframes zoomBg{from{transform:scale(1.1)}to{transform:scale(1.2)}}
 
 
-/* BARRA FISSA MOBILE */
-.fixed-bar{
- position:fixed;
- bottom:0;
- left:0;
- width:100%;
- background:#000;
- display:flex;
- justify-content:space-around;
- align-items:center;
- padding:10px 0;
- z-index:9999;
- border-top:1px solid #222;
-}
-
-.fixed-bar a{
- flex:1;
- text-align:center;
- padding:10px;
- color:white;
- text-decoration:none;
- font-weight:bold;
-}
-
-.fixed-wa{
- background:#25D366;
-}
-
-.fixed-call{
- background:#8b5a2b;
-}
-
-body{padding-bottom:70px;}
 
 </style>
 </head>
 <body>
 
 <header>
-  <h1>PAPAJ COSTRUZIONI</h1>
-  <p>TETTI IN LEGNO TREVISO</p>
+  <h1>PAPAJ</h1>
+  <p>COSTRUZIONI TETTI IN LEGNO</p>
   <div class="subtext">Preventivi rapidi entro 24 ore – Interventi in tutta Treviso</div>
 
   <div class="buttons">
@@ -300,12 +277,6 @@ function addComment(e){
 </script>
 
 
-
-<!-- BARRA FISSA -->
-<div class="fixed-bar">
-  <a class="fixed-wa" href="https://wa.me/393283256441" target="_blank">WhatsApp</a>
-  <a class="fixed-call" href="tel:3283256441">Chiama Ora</a>
-</div>
 
 </body>
 </html>
