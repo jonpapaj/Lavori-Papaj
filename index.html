@@ -1,4 +1,1117 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <a href="https://jonpapaj.github.io/Lavori-Papaj/Papajcostruzionitettiinlegno.html">Papajcostruzionitettiinlegno <br>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAPAJ | TETTI IN LEGNO</title>
+<meta name="description" content="Realizzazione tetti in legno, coperture ventilate, porticati e case in legno in tutto il Triveneto. Preventivi rapidi entro 24 ore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#f3f3f3;
+color:#222;
+overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+position:relative;
+min-height:780px;
+padding:40px 20px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+overflow:hidden;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(rgba(0,0,0,0.16),rgba(0,0,0,0.64)),
+url('img/tetto2.jpg') center 70%/cover no-repeat;
+
+filter:
+brightness(0.82)
+contrast(1.08)
+saturate(0.95);
+}
+
+.hero::after{
+content:"";
+position:absolute;
+inset:0;
+background:
+radial-gradient(
+circle at top,
+rgba(255,255,255,0.08),
+transparent 55%
+);
+z-index:1;
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+position:relative;
+z-index:2;
+animation:heroFade 1.2s ease;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:flex-start;
+}
+
+@keyframes heroFade{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* LOGO */
+
+.logo{
+width:1040px;
+max-width:94%;
+
+margin-bottom:-55px;
+
+filter:
+brightness(1.16)
+contrast(1.16)
+drop-shadow(0 0 34px rgba(255,255,255,0.20))
+drop-shadow(0 18px 42px rgba(0,0,0,0.65));
+
+mix-blend-mode:screen;
+
+animation:logoFade 1.2s ease;
+}
+
+@keyframes logoFade{
+from{
+opacity:0;
+transform:translateY(25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.hero-sub{
+margin-top:6px;
+margin-bottom:10px;
+font-size:1.08rem;
+color:#f3f3f3;
+letter-spacing:0.5px;
+font-weight:500;
+opacity:0.92;
+text-shadow:
+0 2px 10px rgba(0,0,0,0.40);
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:18px;
+margin-top:12px;
+flex-wrap:wrap;
+}
+
+.whatsapp-btn{
+width:72px;
+height:72px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:
+0 10px 20px rgba(0,0,0,0.18);
+transition:
+transform 0.25s ease,
+opacity 0.25s ease;
+}
+
+.whatsapp-btn:hover{
+transform:translateY(-4px) scale(1.05);
+}
+
+.whatsapp-btn img{
+width:38px;
+}
+
+.main-btn{
+min-width:210px;
+height:68px;
+padding:0 30px;
+border-radius:22px;
+
+background:
+linear-gradient(135deg,#b56a06,#7b4200);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-decoration:none;
+color:white;
+
+font-size:1.12rem;
+font-weight:700;
+letter-spacing:0.8px;
+
+box-shadow:
+0 10px 20px rgba(0,0,0,0.15);
+
+transition:
+transform 0.3s ease,
+box-shadow 0.3s ease,
+background 0.3s ease;
+}
+
+.main-btn:hover{
+transform:translateY(-4px);
+
+background:
+linear-gradient(135deg,#c9780a,#8a4700);
+
+box-shadow:
+0 14px 28px rgba(0,0,0,0.22);
+}
+
+/* NAVBAR */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(255,255,255,0.96);
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+backdrop-filter:blur(10px);
+}
+
+.navbar ul{
+display:flex;
+justify-content:center;
+gap:60px;
+padding:22px;
+list-style:none;
+flex-wrap:wrap;
+}
+
+.navbar a{
+text-decoration:none;
+color:#222;
+font-weight:700;
+font-size:1rem;
+transition:0.3s ease;
+}
+
+.navbar a:hover{
+color:#a45d00;
+}
+
+/* CONTAINER */
+
+.container{
+width:92%;
+max-width:1600px;
+margin:auto;
+padding:55px 0 80px;
+}
+
+/* ANIMAZIONI */
+
+.fade-up{
+opacity:0;
+transform:translateY(30px);
+transition:
+opacity 0.8s ease,
+transform 0.8s ease;
+}
+
+.fade-up.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* CARD */
+
+.card{
+background:white;
+border-radius:28px;
+padding:42px;
+margin-bottom:34px;
+box-shadow:
+0 8px 25px rgba(0,0,0,0.05);
+transition:0.35s ease;
+}
+
+.card:hover{
+transform:translateY(-2px);
+}
+
+/* TITLES */
+
+.section-mini{
+font-size:1.45rem;
+font-weight:800;
+color:#a45d00;
+margin-bottom:22px;
+letter-spacing:1.5px;
+text-transform:uppercase;
+}
+
+.section-title{
+font-size:3rem;
+font-weight:800;
+line-height:1.15;
+margin-bottom:25px;
+}
+
+.line{
+width:55px;
+height:4px;
+background:#a45d00;
+border-radius:30px;
+margin-bottom:28px;
+}
+
+/* ABOUT */
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:45px;
+align-items:center;
+}
+
+.about-text p{
+line-height:1.95;
+margin-bottom:20px;
+font-size:1.08rem;
+}
+
+.about-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:22px;
+transition:0.35s ease;
+}
+
+.about-image img:hover{
+transform:scale(1.02);
+}
+
+/* SERVICES */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:22px;
+margin-top:20px;
+}
+
+.service-box{
+background:#fafafa;
+border:1px solid #eee;
+border-radius:22px;
+padding:38px 28px;
+text-align:center;
+transition:0.35s ease;
+}
+
+.service-box:hover{
+transform:translateY(-6px);
+box-shadow:
+0 12px 24px rgba(0,0,0,0.06);
+}
+
+.service-img{
+width:78px;
+height:78px;
+object-fit:cover;
+border-radius:18px;
+margin-bottom:18px;
+box-shadow:
+0 8px 18px rgba(0,0,0,0.10);
+}
+
+.service-box h3{
+font-size:1.12rem;
+line-height:1.5;
+}
+
+/* LAVORI */
+
+#lavori{
+padding:55px;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+margin-top:28px;
+}
+
+.gallery-grid img{
+width:100%;
+height:270px;
+object-fit:cover;
+border-radius:22px;
+transition:0.35s ease;
+box-shadow:
+0 10px 22px rgba(0,0,0,0.12);
+cursor:pointer;
+
+-webkit-tap-highlight-color: transparent;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.025);
+box-shadow:
+0 18px 34px rgba(0,0,0,0.20);
+}
+
+/* CONTACTS */
+
+.contacts-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+align-items:start;
+}
+
+.contact-box{
+display:flex;
+flex-direction:column;
+gap:22px;
+}
+
+.contact-item{
+font-size:1.08rem;
+line-height:1.6;
+}
+
+.map-box{
+margin-top:25px;
+}
+
+/* FORM */
+
+.form-card{
+background:#fafafa;
+border-radius:22px;
+padding:30px;
+border:1px solid #eee;
+}
+
+.form-card p{
+line-height:1.8;
+margin-bottom:25px;
+}
+
+.form-group{
+display:flex;
+gap:12px;
+margin-bottom:12px;
+}
+
+.form-card input,
+.form-card textarea{
+width:100%;
+padding:16px;
+border-radius:14px;
+border:1px solid #ddd;
+font-family:'Inter',sans-serif;
+font-size:1rem;
+transition:0.3s ease;
+}
+
+.form-card input:focus,
+.form-card textarea:focus{
+outline:none;
+border-color:#a45d00;
+}
+
+.form-card textarea{
+min-height:140px;
+resize:none;
+margin-bottom:16px;
+}
+
+.send-btn{
+width:100%;
+height:62px;
+border:none;
+border-radius:18px;
+
+background:
+linear-gradient(135deg,#b56a06,#7b4200);
+
+color:white;
+font-size:1rem;
+font-weight:700;
+letter-spacing:0.5px;
+
+cursor:pointer;
+
+box-shadow:
+0 10px 20px rgba(0,0,0,0.14);
+
+transition:
+transform 0.3s ease,
+box-shadow 0.3s ease,
+background 0.3s ease;
+}
+
+.send-btn:hover{
+transform:translateY(-4px);
+
+background:
+linear-gradient(135deg,#c9780a,#8a4700);
+
+box-shadow:
+0 14px 28px rgba(0,0,0,0.22);
+}
+
+/* MAP */
+
+iframe{
+width:100%;
+height:320px;
+border:none;
+border-radius:20px;
+}
+
+/* FOOTER */
+
+footer{
+background:linear-gradient(135deg,#8a4700,#5f2f00);
+color:white;
+text-align:center;
+padding:34px;
+font-size:1rem;
+margin-top:40px;
+}
+
+/* MOBILE */
+
+@media(max-width:1200px){
+
+.gallery-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.contacts-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:1100px){
+
+.services-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.about-grid{
+grid-template-columns:1fr;
+}
+
+.logo{
+width:620px;
+max-width:92%;
+}
+
+}
+
+@media(max-width:700px){
+
+.hero{
+min-height:720px;
+padding:80px 20px 40px;
+}
+
+.logo{
+width:340px;
+max-width:94%;
+
+margin-bottom:-18px;
+}
+
+.hero-sub{
+font-size:1rem;
+line-height:1.6;
+}
+
+.main-btn{
+width:100%;
+}
+
+.services-grid{
+grid-template-columns:1fr;
+}
+
+.gallery-grid{
+grid-template-columns:1fr;
+gap:18px;
+}
+
+.gallery-grid img{
+height:230px;
+}
+
+.navbar ul{
+gap:25px;
+}
+
+.section-title{
+font-size:2.2rem;
+}
+
+.form-group{
+flex-direction:column;
+}
+
+.card{
+padding:28px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<img src="img/logo.png" class="logo">
+
+<div class="hero-sub">
+Preventivi rapidi entro 24 ore — Interventi in tutto il Triveneto
+</div>
+
+<div class="hero-buttons">
+
+<a href="https://wa.me/393283256441" class="whatsapp-btn" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
+
+<a href="#preventivo" class="main-btn">
+PREVENTIVO
+</a>
+
+<a href="tel:3283256441" class="main-btn">
+CHIAMA ORA
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<ul>
+<li><a href="#">HOME</a></li>
+<li><a href="#servizi">SERVIZI</a></li>
+<li><a href="#lavori">LAVORI</a></li>
+<li><a href="#contatti">CONTATTI</a></li>
+</ul>
+
+</nav>
+
+<div class="container">
+
+<!-- ABOUT -->
+
+<section class="card fade-up">
+
+<div class="about-grid">
+
+<div class="about-text">
+
+<div class="section-mini">
+CHI SIAMO
+</div>
+
+<h2 class="section-title">
+Esperienza, qualità e passione per i tetti in legno
+</h2>
+
+<div class="line"></div>
+
+<p>
+Da oltre <strong>30 anni</strong> realizziamo tetti e strutture in legno in tutto il Triveneto, seguendo ogni progetto con esperienza, precisione e attenzione ai dettagli.
+</p>
+
+<p>
+Siamo specializzati nella realizzazione di <strong>coperture in legno e tetti ventilati, case in legno, porticati e tettoie</strong>, offrendo soluzioni solide, curate esteticamente e costruite per durare nel tempo.
+</p>
+
+<p>
+Ogni lavoro viene eseguito utilizzando <strong>materiali di alta qualità</strong> e tecniche affidabili, garantendo sicurezza, resistenza e un risultato professionale.
+</p>
+
+<p>
+Seguiamo ogni fase del lavoro, dalla progettazione alla rifinitura finale, mantenendo sempre ordine, pulizia e massima disponibilità verso il cliente.
+</p>
+
+<p>
+La nostra priorità è realizzare lavori precisi e duraturi, costruendo un rapporto di fiducia con ogni cliente attraverso serietà, puntualità e passione per questo mestiere.
+</p>
+
+</div>
+
+<div class="about-image">
+<img src="img/tetto4.jpg">
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="servizi" class="card fade-up">
+
+<div class="section-mini">
+I NOSTRI SERVIZI
+</div>
+
+<div class="services-grid">
+
+<div class="service-box">
+<img src="img/servizio1.jpg" class="service-img">
+<h3>Posa coperture in legno e tetti ventilati</h3>
+</div>
+
+<div class="service-box">
+<img src="img/servizio2.jpg" class="service-img">
+<h3>Case in legno</h3>
+</div>
+
+<div class="service-box">
+<img src="img/servizio3.jpg" class="service-img">
+<h3>Porticati e tettoie</h3>
+</div>
+
+<div class="service-box">
+<img src="img/servizio4.jpg" class="service-img">
+<h3>Lavori edili in genere</h3>
+</div>
+
+</div>
+
+</section>
+
+<!-- LAVORI -->
+
+<section id="lavori" class="card fade-up">
+
+<div class="section-mini">
+LAVORI
+</div>
+
+<div class="gallery-grid">
+
+<img src="img/hero.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+<img src="img/tetto1.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+<img src="img/tetto3.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+<img src="img/tetto4.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+<img src="img/tetto5.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+<img src="img/tetto6.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+<img src="img/tetto7.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+<img src="img/tetto8.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+<img src="img/tetto12.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+<img src="img/tetto9.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+<img src="img/tetto10.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+<img src="img/tetto11.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+<img src="img/tetto13.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+<img src="img/tetto14.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+<img src="img/tetto15.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+<img src="img/tetto17.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+<img src="img/tetto18.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+<img src="img/tetto19.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+<img src="img/tetto20.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+<img src="img/tetto21.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+<img src="img/furgoni.jpg" loading="lazy" alt="Tetto in legno realizzato da Papaj">
+
+</div>
+
+</section>
+
+<!-- CONTATTI -->
+
+<section id="contatti" class="card fade-up">
+
+<div class="contacts-grid">
+
+<div class="contact-box">
+
+<div class="section-mini">
+CONTATTI
+</div>
+
+<div class="contact-item">
+📞 328 325 6441
+</div>
+
+<div class="contact-item">
+📧 papajjon@gmail.com
+</div>
+
+<div class="contact-item">
+📍 San Zenone degli Ezzelini (TV)<br>
+Interventi in tutto il Triveneto
+</div>
+
+<div class="map-box">
+<iframe src="https://maps.google.com/maps?q=San%20Zenone%20degli%20Ezzelini&output=embed"></iframe>
+</div>
+
+</div>
+
+<!-- PREVENTIVO -->
+
+<section id="preventivo" class="form-card">
+
+<div class="section-mini">
+PREVENTIVO GRATUITO
+</div>
+
+<p>
+Contattaci su WhatsApp per un preventivo gratuito e senza impegno.
+</p>
+
+<form onsubmit="sendToWhatsApp(event)">
+
+<div class="form-group">
+
+<input type="text" id="nome" placeholder="Nome" required>
+
+<input type="text" id="telefono" placeholder="Telefono" required>
+
+</div>
+
+<textarea id="messaggio" placeholder="Descrivi il lavoro"></textarea>
+
+<button class="send-btn">
+INVIA SU WHATSAPP
+</button>
+
+</form>
+
+</section>
+
+</div>
+
+</section>
+
+</div>
+
+<footer>
+© 2026 PAPAJ – TETTI IN LEGNO • P.IVA 05619150260 • Tutti i diritti riservati.
+</footer>
+
+<script>
+
+function sendToWhatsApp(e){
+
+e.preventDefault();
+
+const nome=document.getElementById('nome').value;
+const telefono=document.getElementById('telefono').value;
+const messaggio=document.getElementById('messaggio').value;
+
+window.open(
+`https://wa.me/393283256441?text=Nome:%20${nome}%0ATelefono:%20${telefono}%0AMessaggio:%20${messaggio}`,
+'_blank'
+);
+
+}
+
+/* ANIMAZIONI LEGGERE */
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+
+});
+
+},{
+threshold:0.12
+});
+
+document.querySelectorAll('.fade-up').forEach((el)=>{
+observer.observe(el);
+});
+
+</script>
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+<span class="close-lightbox" onclick="closeLightbox()">
+✕
+</span>
+
+<span class="prev-lightbox" onclick="changeImage(-1)">
+❮
+</span>
+
+<img id="lightbox-img">
+
+<span class="next-lightbox" onclick="changeImage(1)">
+❯
+</span>
+
+</div>
+
+<style>
+
+.lightbox{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.92);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:99999;
+padding:20px;
+}
+
+.lightbox.show{
+display:flex;
+animation:fadeLightbox 0.25s ease;
+}
+
+@keyframes fadeLightbox{
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
+
+}
+
+#lightbox-img{
+max-width:95%;
+max-height:90vh;
+object-fit:contain;
+border-radius:18px;
+box-shadow:
+0 0 40px rgba(0,0,0,0.5);
+}
+
+.close-lightbox,
+.prev-lightbox,
+.next-lightbox{
+position:absolute;
+color:white;
+font-size:42px;
+cursor:pointer;
+user-select:none;
+font-weight:300;
+
+-webkit-tap-highlight-color: transparent;
+
+transition:0.25s ease;
+}
+
+.close-lightbox:hover,
+.prev-lightbox:hover,
+.next-lightbox:hover{
+transform:scale(1.1);
+}
+
+.close-lightbox{
+top:20px;
+right:30px;
+}
+
+.prev-lightbox{
+left:25px;
+top:50%;
+transform:translateY(-50%);
+}
+
+.next-lightbox{
+right:25px;
+top:50%;
+transform:translateY(-50%);
+}
+
+@media(max-width:700px){
+
+.close-lightbox{
+font-size:34px;
+top:14px;
+right:20px;
+}
+
+.prev-lightbox,
+.next-lightbox{
+font-size:34px;
+}
+
+}
+
+</style>
+
+<script>
+
+const galleryImages = document.querySelectorAll('.gallery-grid img');
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+let currentImage = 0;
+
+galleryImages.forEach((img,index)=>{
+
+img.addEventListener('click',()=>{
+
+currentImage=index;
+
+showImage();
+
+lightbox.classList.add('show');
+
+});
+
+});
+
+function showImage(){
+
+lightboxImg.src = galleryImages[currentImage].src;
+lightboxImg.alt = galleryImages[currentImage].alt;
+
+}
+
+function closeLightbox(){
+
+lightbox.classList.remove('show');
+
+}
+
+function changeImage(direction){
+
+currentImage += direction;
+
+if(currentImage < 0){
+currentImage = galleryImages.length - 1;
+}
+
+if(currentImage >= galleryImages.length){
+currentImage = 0;
+}
+
+showImage();
+
+}
+
+lightbox.addEventListener('click',(e)=>{
+
+if(e.target === lightbox){
+closeLightbox();
+}
+
+});
+
+document.addEventListener('keydown',(e)=>{
+
+if(!lightbox.classList.contains('show')) return;
+
+if(e.key === 'ArrowRight'){
+changeImage(1);
+}
+
+if(e.key === 'ArrowLeft'){
+changeImage(-1);
+}
+
+if(e.key === 'Escape'){
+closeLightbox();
+}
+
+});
+
+/* SWIPE MOBILE */
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+lightbox.addEventListener('touchstart',(e)=>{
+
+touchStartX = e.changedTouches[0].screenX;
+
+});
+
+lightbox.addEventListener('touchend',(e)=>{
+
+touchEndX = e.changedTouches[0].screenX;
+
+handleSwipe();
+
+});
+
+function handleSwipe(){
+
+if(touchEndX < touchStartX - 50){
+changeImage(1);
+}
+
+if(touchEndX > touchStartX + 50){
+changeImage(-1);
+}
+
+}
+
+</script>
+</body>
+</html>
